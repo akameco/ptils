@@ -28,7 +28,9 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "package.json",
+    "utils",
+    "zero"
   ],
   "dependencies": {
     "arrify": "^1.0.1",

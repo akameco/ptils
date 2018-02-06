@@ -10,36 +10,46 @@
 ## Install
 
 ```
-$ npm install ptils
+$ yarn add --dev ptils
 ```
 
 ## Usage
 
-```js
-const ptils = require('ptils')
+```json
+{
+  "dependencies": {
+    "react": "^16.0.0"
+  }
+}
+```
 
-ptils('unicorns')
-//=> 'unicorns & rainbows'
+```js
+const { hasAnyDep } = require('ptils')
+
+hasAnyDep('react')
+//=> true
+
+hasAnyDep('lodash')
+//=> false
 ```
 
 ## API
 
-### `ptils(input, [options])`
+### `hasAnyDep(pkg: string): boolean`
 
-#### input
+### `hasDep(pkg: string): boolean`
 
-Type: `string`
+### `hasDevDep(pkg: string): boolean`
 
-Lorem ipsum.
+### `hasPeerDep(pkg: string): boolean`
 
-#### options
+### `hasScript(script: string): boolean`
 
-##### foo
+## Original
 
-Type: `boolean`<br>
-Default: `false`
+https://github.com/kentcdodds/kcd-scripts/blob/v0.32.2/src/utils.js
 
-Lorem ipsum.
+Check [kentcdodds/kcd-scripts: CLI toolbox for common scripts for my projects](https://github.com/kentcdodds/kcd-scripts). It's awesome package!
 
 ## Contributors
 
