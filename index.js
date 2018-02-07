@@ -19,4 +19,24 @@ const hasDevDep = hasPkgSubProp('devDependencies')
 const hasPeerDep = hasPkgSubProp('peerDependencies')
 const hasAnyDep = args => [hasDep, hasDevDep, hasPeerDep].some(fn => fn(args))
 
-module.exports = { hasScript, hasDep, hasDevDep, hasPeerDep, hasAnyDep }
+const ifPkgSubProp = pkgProp => (props, t, f) =>
+  hasPkgSubProp(pkgProp)(props) ? t : f
+
+const ifPeerDep = ifPkgSubProp('peerDependencies')
+const ifDep = ifPkgSubProp('dependencies')
+const ifDevDep = ifPkgSubProp('devDependencies')
+const ifAnyDep = (deps, t, f) => (hasAnyDep(arrify(deps)) ? t : f)
+const ifScript = ifPkgSubProp('scripts')
+
+module.exports = {
+  hasScript,
+  hasDep,
+  hasDevDep,
+  hasPeerDep,
+  hasAnyDep,
+  ifAnyDep,
+  ifPeerDep,
+  ifDep,
+  ifDevDep,
+  ifScript,
+}
