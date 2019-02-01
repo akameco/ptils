@@ -32,19 +32,19 @@
     "zero"
   ],
   "dependencies": {
-    "arrify": "^1.0.1",
-    "lodash.has": "^4.5.2",
-    "read-pkg-up": "^3.0.0"
+    "arrify": "1.0.1",
+    "lodash.has": "4.5.2",
+    "read-pkg-up": "3.0.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "^4.10.1",
-    "eslint": "^4.18.2",
-    "eslint-config-precure": "^2.6.0",
-    "flow-bin": "^0.67.1",
-    "husky": "^1.3.1",
-    "jest": "^22.4.2",
-    "lint-staged": "^8.1.1",
-    "prettier": "^1.16.3"
+    "all-contributors-cli": "4.10.1",
+    "eslint": "4.18.2",
+    "eslint-config-precure": "2.6.0",
+    "flow-bin": "0.67.1",
+    "husky": "1.3.1",
+    "jest": "22.4.2",
+    "lint-staged": "8.1.1",
+    "prettier": "1.16.3"
   },
   "husky": {
     "hooks": {
