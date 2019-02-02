@@ -37,7 +37,7 @@
     "read-pkg-up": "3.0.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "4.10.1",
+    "all-contributors-cli": "5.11.0",
     "eslint": "4.19.1",
     "eslint-config-precure": "2.8.1",
     "flow-bin": "0.92.0",
