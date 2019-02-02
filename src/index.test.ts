@@ -1,12 +1,10 @@
-// @flow weak
-/* eslint global-require:0 */
 jest.mock('read-pkg-up', () => ({
   sync: jest.fn(() => ({ pkg: {}, path: '/blah/package.json' })),
 }))
 
-let readPkgUpSyncMock
+let readPkgUpSyncMock: jest.Mock<() => import('read-pkg-up').Package>
 
-function mockPkg({ pkg = {}, path = '/blah/package.json' } /*: any */) {
+function mockPkg({ pkg = {}, path = '/blah/package.json' }) {
   readPkgUpSyncMock.mockImplementationOnce(() => ({ pkg, path }))
 }
 
