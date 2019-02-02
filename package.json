@@ -10,6 +10,8 @@
   },
   "scripts": {
     "add-contributor": "all-contributors add",
+    "prepare": "yarn build",
+    "build": "tsc -p .",
     "fmt": "prettier --write '**/*.{ts,json,md}'",
     "lint": "eslint src/**/*.ts",
     "test": "jest",
