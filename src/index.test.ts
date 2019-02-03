@@ -4,7 +4,7 @@ jest.mock('read-pkg-up', () => ({
 
 let readPkgUpSyncMock: jest.Mock<() => import('read-pkg-up').Package>
 
-function mockPkg({ pkg = {}, path = '/blah/package.json' }) {
+function mockPkg({ pkg = {}, path = '/blah/package.json' }): void {
   readPkgUpSyncMock.mockImplementationOnce(() => ({ pkg, path }))
 }
 

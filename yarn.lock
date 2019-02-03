@@ -210,7 +210,16 @@
   dependencies:
     "@types/normalize-package-data" "*"
 
-"@typescript-eslint/parser@^1.2.0":
+"@typescript-eslint/eslint-plugin@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-1.2.0.tgz#a73021a0d5bd1116a88689186844ce4421d52ab0"
+  integrity sha512-em3q8Gg3euesNohOwaz+SqrQM2Jn1ZWELMM+vgKi4dEk5fC+eVoi05yfubgAi2qPE5ifG4F0SOXM1XTamB0Aig==
+  dependencies:
+    "@typescript-eslint/parser" "1.2.0"
+    requireindex "^1.2.0"
+    tsutils "^3.7.0"
+
+"@typescript-eslint/parser@1.2.0", "@typescript-eslint/parser@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-1.2.0.tgz#256de163b7cb0d79d0388266a5bfb5585bccb1ff"
   integrity sha512-IXXiXgs6ocKTmtbzJjGyUvRHZFLuk2mYXyk+ayEql1woh1+rYS/Uct8b4jGtfHG8ZRUBZ12zjzsrDKFYC2pbrQ==
@@ -1118,11 +1127,12 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-precure@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-precure/-/eslint-config-precure-4.0.0.tgz#e56f7ae089aee1840d6fc6bf8dd80f39323066a8"
-  integrity sha512-ryj09cw0s09lhlFgiEyi3bUeFG7P8iOqQEhWTxATWN/RHsugMnfaE3SMbArCFKcP3K+YOFQiTY7T65bWhLDQ9w==
+eslint-config-precure@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-precure/-/eslint-config-precure-4.2.0.tgz#94afd04bea5b7d26bd09822a829653a8b7821b1d"
+  integrity sha512-iPRQeiDHjyLVtJvRzy2uHW/Ch1T+MhxHJ1fjhJQJm5gaHN9hhMmRpfg5ej2tSthE2EnKI4595Fjonm/1/UfLyw==
   dependencies:
+    "@typescript-eslint/eslint-plugin" "^1.2.0"
     "@typescript-eslint/parser" "^1.2.0"
     babel-eslint "^10.0.1"
     eslint-config-prettier "^4.0.0"
@@ -1132,6 +1142,7 @@ eslint-config-precure@4.0.0:
     eslint-plugin-prettier "^3.0.1"
     eslint-plugin-react "^7.12.4"
     eslint-plugin-unicorn "^7.0.0"
+    ptils "^0.3.0"
 
 eslint-config-prettier@^4.0.0:
   version "4.0.0"
@@ -3630,6 +3641,15 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
+ptils@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ptils/-/ptils-0.3.0.tgz#8ea097624c1e1e28e4bba1e7c8779f0af795730c"
+  integrity sha512-KKNmRHSVqONnRZAwFfEEfFwNPGRi+snAz/D1Ajm2KHTieTrNMJUqpFRgSUcSNum2mSJYxv9606qSYy6iW32HPg==
+  dependencies:
+    arrify "1.0.1"
+    lodash.has "4.5.2"
+    read-pkg-up "4.0.0"
+
 pump@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
@@ -3811,6 +3831,11 @@ require-directory@^2.1.1:
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
+
+requireindex@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.2.0.tgz#3463cdb22ee151902635aa6c9535d4de9c2ef1ef"
+  integrity sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -4386,10 +4411,17 @@ ts-jest@^23.10.5:
     semver "^5.5"
     yargs-parser "10.x"
 
-tslib@^1.9.0:
+tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+
+tsutils@^3.7.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.8.0.tgz#7a3dbadc88e465596440622b65c04edc8e187ae5"
+  integrity sha512-XQdPhgcoTbCD8baXC38PQ0vpTZ8T3YrE+vR66YIj/xvDt1//8iAhafpIT/4DmvzzC1QFapEImERu48Pa01dIUA==
+  dependencies:
+    tslib "^1.8.1"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
